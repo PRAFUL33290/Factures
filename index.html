@@ -1,24 +1,167 @@
-<!DOCTYPE html>
-effvaevzfevqbg
-eghssgbsgb
-sbghsbhb
-efqvgqegsqegrsgs
-qergeqgerg
-qegb
-qerg
-erg
-ergrgegege
-aefzefqgffqfvqg
-qzg
-sgzgzrgzgr
-zdgqgergsegserg
-serg
-segsergserger
-greg
-sre
-gergerqhgehghqeh
-qhq
-h
-erhehehhre
-zfqzgqgrz<zf ze fezf<ze fe ff>gzsgsggrz<gsdgzsgzggzgzg_-_ZFGzfgz>fzefgzegz
-fzefefZzg</gsdgzsgzggzgzg_-_ZFGzfgz>
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Page classique</title>
+        <meta name="description" content="Une page HTML classique pour démarrer rapidement." />
+        <link rel="icon" href="data:," />
+        <style>
+            :root {
+                --accent: #0d6efd;
+                --accent-contrast: #fff;
+                --bg: #ffffff;
+                --text: #222;
+                --muted: #6b7280;
+                --border: #e5e7eb;
+                --surface: #fafafa;
+            }
+            * { box-sizing: border-box; }
+            html, body { height: 100%; }
+            body {
+                margin: 0;
+                font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Helvetica Neue", sans-serif;
+                color: var(--text);
+                background: var(--bg);
+            }
+            a { color: var(--accent); text-decoration: none; }
+            a:hover { text-decoration: underline; }
+            .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+
+            .skip-link {
+                position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+            }
+            .skip-link:focus {
+                position: fixed; left: 1rem; top: 1rem; width: auto; height: auto; padding: .5rem .75rem;
+                background: var(--accent); color: var(--accent-contrast); border-radius: .25rem; z-index: 1000;
+            }
+
+            header {
+                position: sticky; top: 0; z-index: 10;
+                background: var(--surface);
+                border-bottom: 1px solid var(--border);
+            }
+            .header-inner {
+                display: flex; align-items: center; justify-content: space-between;
+                padding: .75rem 0;
+            }
+            .brand {
+                font-weight: 700; letter-spacing: .2px;
+            }
+            nav ul {
+                display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0;
+            }
+            nav a { padding: .25rem .5rem; border-radius: .25rem; }
+            nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+            .hero {
+                padding: 3rem 0;
+            }
+            .hero h1 {
+                margin: 0 0 .5rem; font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            }
+            .hero p {
+                margin: 0 0 1.25rem; color: var(--muted);
+            }
+            .btn {
+                display: inline-block; padding: .6rem 1rem; border-radius: .375rem;
+                background: var(--accent); color: var(--accent-contrast); font-weight: 600;
+                border: 1px solid transparent;
+            }
+            .btn:hover { opacity: .95; text-decoration: none; }
+            .btn-outline {
+                background: transparent; color: var(--accent); border-color: var(--accent);
+            }
+            .grid {
+                display: grid; gap: 1rem;
+                grid-template-columns: repeat(12, 1fr);
+            }
+            .card {
+                grid-column: span 12;
+                border: 1px solid var(--border); border-radius: .5rem; padding: 1rem; background: #fff;
+            }
+            @media (min-width: 700px) {
+                .card--main { grid-column: span 8; }
+                .card--aside { grid-column: span 4; }
+            }
+
+            footer {
+                margin-top: 2rem; border-top: 1px solid var(--border);
+                background: var(--surface);
+            }
+            .footer-inner {
+                padding: 1.25rem 0; color: var(--muted); font-size: .95rem;
+                display: flex; flex-wrap: wrap; gap: .5rem; justify-content: space-between; align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+        <header>
+            <div class="container header-inner">
+                <div class="brand">Mon Site</div>
+                <nav aria-label="Navigation principale">
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="contenu" class="container" role="main">
+            <section class="hero" aria-labelledby="titre-page">
+                <h1 id="titre-page">Bienvenue sur votre page classique</h1>
+                <p>Un modèle HTML5 simple, propre et prêt à modifier.</p>
+                <div>
+                    <a class="btn" href="#section-principale">Commencer</a>
+                    <a class="btn btn-outline" href="#en-savoir-plus">En savoir plus</a>
+                </div>
+            </section>
+
+            <section id="section-principale" class="grid" aria-labelledby="section-principale-titre">
+                <h2 id="section-principale-titre" style="grid-column: 1/-1; margin: 0 0 .5rem;">Contenu</h2>
+
+                <article class="card card--main" aria-labelledby="article-titre">
+                    <h3 id="article-titre" style="margin-top: 0;">Un article de démonstration</h3>
+                    <p>
+                        Ceci est un exemple de contenu. Personnalisez le texte, les sections et le style selon vos besoins.
+                        Cette structure utilise des balises sémantiques pour une meilleure accessibilité et SEO.
+                    </p>
+                    <ul>
+                        <li>Balises HTML5 sémantiques</li>
+                        <li>Mise en page responsive</li>
+                        <li>Styles légers et faciles à modifier</li>
+                    </ul>
+                </article>
+
+                <aside class="card card--aside" aria-labelledby="aside-titre">
+                    <h3 id="aside-titre" style="margin-top: 0;">À retenir</h3>
+                    <p>Utilisez cette colonne pour des liens, des actualités ou des informations secondaires.</p>
+                </aside>
+            </section>
+
+            <section id="en-savoir-plus" class="container" style="padding: 1rem 0;">
+                <h2 style="margin-top: 0;">En savoir plus</h2>
+                <p>
+                    Modifiez le titre, la navigation et les couleurs dans la section <code>:root</code>.
+                    Ajoutez vos propres sections et composants selon votre projet.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container footer-inner">
+                <span>&copy; <span id="annee"></span> Mon Site</span>
+                <span><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></span>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById('annee').textContent = new Date().getFullYear();
+        </script>
+    </body>
+</html>
